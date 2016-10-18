@@ -4,6 +4,7 @@ import { Component } from '@angular/core';
   selector: 'app-root',
   template: `
        <h1>Inline template</h1>
+       <fa-other></fa-other>
     `,
   styles: [`
       h1 {
