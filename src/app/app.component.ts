@@ -5,7 +5,7 @@ import { Component } from '@angular/core';
   template: `
        <h1>Root component</h1>
        <fa-lifecicle *ngIf="!delete" [bindable]="boundValue">
-          <p>{{test}}</p>
+          <p #boundContent>{{test}}</p>
        </fa-lifecicle>
        <button (click)="delete = true">Click to Delete</button>
        <button (click)="test = 'Change value'">Click to Change Content</button>
