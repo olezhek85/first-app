@@ -7,20 +7,23 @@ import {
   AfterContentChecked,
   AfterViewInit,
   AfterViewChecked,
-  OnDestroy
+  OnDestroy,
+  Input
 } from '@angular/core';
 
 @Component({
   selector: 'fa-lifecicle',
   template: `
-    <p>
-      lifecicle Works!
-    </p>
+    <ng-content></ng-content>
+    <hr>
+    <p>{{bindable}}</p>
   `,
   styles: []
 })
 export class LifecicleComponent implements OnChanges, OnInit, DoCheck, AfterContentInit,
   AfterContentChecked, AfterViewInit, AfterViewChecked, OnDestroy {
+
+  @Input() bindable = 1000;
 
   constructor() { }
 
